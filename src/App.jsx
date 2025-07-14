@@ -114,6 +114,11 @@ function App() {
 
           <div ref={sectionRefs.ClientsSection}>
             <ClientsSection />
+
+          </div>
+
+          <div ref={sectionRefs.CalificacionesSection}>
+            <CalificacionesSection />
           </div>
 
           <div ref={sectionRefs.ContactSection} className="wave-pattern">
