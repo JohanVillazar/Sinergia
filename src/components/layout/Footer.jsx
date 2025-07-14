@@ -49,12 +49,25 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
         <div className="border-t border-white/10 mt-8 pt-8 text-center">
-          <p className="text-gray-400">
-            © 2025 Sinergia. Todos los derechos reservados.
-          </p>
-        </div>
+  <p className="text-gray-400">
+    © 2025 Sinergia. Todos los derechos reservados.
+  </p>
+  <p className="text-gray-400 mt-2">
+    Desarrollado por{" "}
+    <a
+      href="https://www.simulagency.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-white hover:text-[#e64d24] font-semibold"
+    >
+      Simul
+    </a>
+  </p>
+</div>
+
+
+       
       </div>
     </footer>
   );

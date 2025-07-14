@@ -59,10 +59,10 @@ const PortfolioSection = () => {
               data-aos={isEven ? "fade-right" : "fade-left"}
               className={`flex flex-col md:flex-row ${
                 !isEven ? "md:flex-row-reverse" : ""
-              } w-full h-[400px] overflow-hidden rounded-xl shadow-xl`}
+                } w-full overflow-hidden rounded-xl shadow-xl`}
             >
-              {/* Imagen sin overlay ni degradado */}
-              <div className="w-full md:w-1/2 h-full">
+              {/* Imagen */}
+              <div className="w-full md:w-1/2 h-[300px] md:h-[400px]">
                 <img
                   src={item.imgSrc}
                   alt={item.alt}
@@ -70,20 +70,22 @@ const PortfolioSection = () => {
                 />
               </div>
 
-              {/* Contenido con fondo sólido */}
+              {/* Contenido */}
               <div
-                className={`w-full md:w-1/2 h-full text-white flex flex-col justify-center px-10 py-8 ${
+                className={`w-full md:w-1/2 text-white flex flex-col justify-center px-6 py-6 ${
                   index === 1 ? "bg-[#3d3d3d]" : "bg-[#e64d24]"
                 }`}
               >
-                <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
-                <p className="mb-6 text-white/90">{item.description}</p>
+                <h3 className="text-xl md:text-2xl font-bold mb-3">{item.title}</h3>
+                <p className="text-sm md:text-base mb-4 text-white/90">{item.description}</p>
                 <button
                   onClick={() => setSelectedItem(item)}
-                  className="border border-white px-6 py-2 rounded-md hover:bg-white hover:text-[#e64d24] transition-all w-fit"
+                  className="border border-white px-5 py-2 rounded-md hover:bg-white hover:text-[#e64d24] transition-all w-fit mt-4 md:mt-0"
                 >
                   SABER MÁS
                 </button>
+
+              
               </div>
             </div>
           );
@@ -92,32 +94,30 @@ const PortfolioSection = () => {
 
       {/* Modal */}
       {selectedItem && (
-  <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center px-4">
-    <div className="bg-white rounded-xl p-6 max-w-xl w-full relative">
-      <button
-        onClick={() => setSelectedItem(null)}
-        className="absolute top-4 right-4 text-gray-400 hover:text-black text-xl"
-      >
-        ×
-      </button>
+        <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center px-4">
+          <div className="bg-white rounded-xl p-6 max-w-xl w-full relative">
+            <button
+              onClick={() => setSelectedItem(null)}
+              className="absolute top-4 right-4 text-gray-400 hover:text-black text-xl"
+            >
+              ×
+            </button>
 
+            <h2 className="text-2xl font-bold mb-4 text-[#e64d24]">
+              {selectedItem.title}
+            </h2>
 
-      <h2 className="text-2xl font-bold mb-4 text-[#e64d24]">
-        {selectedItem.title}
-      </h2>
-
-      <ul className="space-y-2 text-gray-700">
-        {selectedItem.longDescription.map((point, idx) => (
-          <li key={idx} className="flex items-start gap-2">
-            <span className="text-green-500 text-lg"></span>
-            <span>{point}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
-  </div>
-)}
-  
+            <ul className="space-y-2 text-gray-700">
+              {selectedItem.longDescription.map((point, idx) => (
+                <li key={idx} className="flex items-start gap-2">
+                  <span className="text-green-500 text-lg"></span>
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
