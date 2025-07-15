@@ -44,7 +44,7 @@ const Header = ({ scrollToSection }) => {
       
 
           <div className="hidden md:flex space-x-8">
-            {['inicio', 'nosotros', 'mision-vision', 'portafolio', 'clientes', 'contacto'].map((item, index) => (
+            {['inicio', 'nosotros', 'mision-vision', 'portafolio', 'Calificaciones', 'clientes', 'contacto'].map((item, index) => (
               <motion.button
                 key={item}
                 onClick={() => scrollToSection(item)}
@@ -77,7 +77,7 @@ const Header = ({ scrollToSection }) => {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
           >
-            {['inicio', 'nosotros', 'mision-vision', 'portafolio', 'clientes', 'contacto'].map((item) => (
+            {['inicio', 'nosotros', 'mision-vision', 'portafolio', 'Calificaciones', 'clientes', 'contacto'].map((item) => (
               <button
                 key={item}
                 onClick={() => {

@@ -21,7 +21,7 @@ const portfolioItems = [
     alt: "Sistema de importación",
   },
   {
-    title: "INTERCOMEX-SF",
+    title: "INTERCOMEX-ZF",
     description: "Control Total en el Régimen Franco.INTERCOMEX-ZF es la solución especializada para la gestión y control de operaciones en zonas francas. Asegura el cumplimiento normativo, optimiza inventarios y automatiza tareas clave como el Formulario de Movimiento de Mercancías (FMM). ¿Listo para transformar tu gestión aduanera?Con Intercomex e Intercomex-ZF, en Sinergia impulsamos la transformación digital del comercio exterior.",
     longDescription: [
       "📜 Cumplimiento normativo automático (Decreto 2685/1999, art. 393-2)",

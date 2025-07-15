@@ -18,7 +18,7 @@ const calificaciones = [
 
 export default function CalificacionesSection() {
   return (
-    <section className="py-20 bg-[#e64d24]/90" id="calificaciones">
+    <section className="py-20 bg-[#e64d24]/90" id="Calificaciones">
       <div className="max-w-7xl mx-auto px-4 text-center">
         <h2 className="text-4xl font-bold text-white mb-12">Calificaciones</h2>
 
