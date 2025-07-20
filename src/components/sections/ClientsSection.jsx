@@ -30,6 +30,11 @@ const clients = [
     logo: 'move.png',
     url: 'https://www.portauthority.com'
   },
+   {
+    name: 'Colcex',
+    logo: 'colcex.png',
+    url: 'https://www.portauthority.com'
+  },
   
 ];
 

@@ -47,8 +47,8 @@ const AboutSection = () => {
               </ModernCard>
               <ModernCard className="text-center light-card">
                 <Globe className="h-12 w-12 text-[#e64d24] mx-auto mb-4" />
-                <h4 className="text-2xl font-bold mb-2 text-[#333]">1+</h4>
-                <p className="text-gray-600">Países Atendidos</p>
+                <h4 className="text-2xl font-bold mb-2 text-[#333]">30+</h4>
+                <p className="text-gray-600">Agencias y Aduanas</p>
               </ModernCard>
               <ModernCard className="text-center light-card">
                 <Award className="h-12 w-12 text-[#e64d24] mx-auto mb-4" />

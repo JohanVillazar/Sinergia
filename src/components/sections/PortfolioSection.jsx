@@ -5,36 +5,35 @@ import "aos/dist/aos.css";
 const portfolioItems = [
   {
     title: "INTERCOMEX",
-    description: "Solución Inteligente para tus Importaciones INTERCOMEX es nuestra plataforma insignia para la gestión automatizada de importaciones, diseñada para reducir costos operativos, tiempos de proceso y errores en trámites con la DIAN. Desde 2011, INTERCOMEX ha evolucionado con la tecnología y la normativa aduanera para mantenerse como una herramienta robusta, ágil y segura. Ideal para empresas que buscan simplificar y transformar su gestión aduanera.",
+    description:
+      "Solución Inteligente para tus Importaciones INTERCOMEX es nuestra plataforma insignia para la gestión automatizada de importaciones, diseñada para reducir costos operativos, tiempos de proceso y errores en trámites con la DIAN. Desde 2011, INTERCOMEX ha evolucionado con la tecnología y la normativa aduanera para mantenerse como una herramienta robusta, ágil y segura. Ideal para empresas que buscan simplificar y transformar su gestión aduanera.",
     longDescription: [
       "🚀 ¿Qué ofrece INTERCOMEX?",
-
-  "🤖 Automatización completa de trámites de importación.",
-  "🔗 Integración directa con DIAN y otros sistemas clave.",
-  "⏱️ Reducción de errores y tiempos de espera.",
-  "⚙️ Optimización operativa con mínimo esfuerzo humano.",
-  "📊 Control total y trazabilidad de cada proceso."
-
-      
+      "🤖 Automatización completa de trámites de importación.",
+      "🔗 Integración directa con DIAN y otros sistemas clave.",
+      "⏱️ Reducción de errores y tiempos de espera.",
+      "⚙️ Optimización operativa con mínimo esfuerzo humano.",
+      "📊 Control total y trazabilidad de cada proceso."
     ],
-    imgSrc: "https://cdn.pixabay.com/photo/2021/10/29/11/09/container-6751623_960_720.jpg",
-    alt: "Sistema de importación",
+    imgSrc:
+      "./inter.jpg",
+    alt: "Sistema de importación"
   },
   {
     title: "INTERCOMEX-ZF",
-    description: "Control Total en el Régimen Franco.INTERCOMEX-ZF es la solución especializada para la gestión y control de operaciones en zonas francas. Asegura el cumplimiento normativo, optimiza inventarios y automatiza tareas clave como el Formulario de Movimiento de Mercancías (FMM). ¿Listo para transformar tu gestión aduanera?Con Intercomex e Intercomex-ZF, en Sinergia impulsamos la transformación digital del comercio exterior.",
+    description:
+      "Control Total en el Régimen Franco.INTERCOMEX-ZF es la solución especializada para la gestión y control de operaciones en zonas francas. Asegura el cumplimiento normativo, optimiza inventarios y automatiza tareas clave como el Formulario de Movimiento de Mercancías (FMM). ¿Listo para transformar tu gestión aduanera?Con Intercomex e Intercomex-ZF, en Sinergia impulsamos la transformación digital del comercio exterior.",
     longDescription: [
       "📜 Cumplimiento normativo automático (Decreto 2685/1999, art. 393-2)",
       "📲 Acceso remoto desde cualquier dispositivo.",
       "📋 Generación automática del FMM.",
       "🧾 Control detallado de inventarios y seguimiento de mercancías.",
-      "🔐 Bloqueos operacionales para garantizar seguridad y cumplimiento.",
+      "🔐 Bloqueos operacionales para garantizar seguridad y cumplimiento."
     ],
-    imgSrc: "https://cdn.pixabay.com/photo/2018/05/10/17/31/antwerp-3388127_960_720.jpg",
-    alt: "Control portuario",
-  },
+    imgSrc: "./intercomex.jpg",
+    alt: "Control portuario"
+  }
 ];
-
 
 const PortfolioSection = () => {
   const [selectedItem, setSelectedItem] = useState(null);
@@ -49,47 +48,34 @@ const PortfolioSection = () => {
         PORTAFOLIO
       </h2>
 
-      <div className="space-y-24">
-        {portfolioItems.map((item, index) => {
-          const isEven = index % 2 === 0;
-
-          return (
-            <div
-              key={index}
-              data-aos={isEven ? "fade-right" : "fade-left"}
-              className={`flex flex-col md:flex-row ${
-                !isEven ? "md:flex-row-reverse" : ""
-                } w-full overflow-hidden rounded-xl shadow-xl`}
-            >
-              {/* Imagen */}
-              <div className="w-full md:w-1/2 h-[300px] md:h-[400px]">
-                <img
-                  src={item.imgSrc}
-                  alt={item.alt}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-
-              {/* Contenido */}
-              <div
-                className={`w-full md:w-1/2 text-white flex flex-col justify-center px-6 py-6 ${
-                  index === 1 ? "bg-[#3d3d3d]" : "bg-[#e64d24]"
-                }`}
+      <div className="grid gap-10 px-4 md:grid-cols-2 max-w-6xl mx-auto">
+        {portfolioItems.map((item, index) => (
+          <div
+            key={index}
+            data-aos="fade-up"
+            className="bg-gray-100 rounded-xl shadow-md overflow-hidden flex flex-col items-center"
+          >
+            <img
+              src={item.imgSrc}
+              alt={item.alt}
+              className="w-full h-full object-cover"
+            />
+            <div className="p-6 text-center">
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                {item.title}
+              </h3>
+              <p className="text-gray-600 text-sm mb-4">
+                {item.description.substring(0, 160)}...
+              </p>
+              <button
+                onClick={() => setSelectedItem(item)}
+                className="border border-gray-500 px-6 py-2 rounded-full text-gray-800 hover:bg-gray-200 transition"
               >
-                <h3 className="text-xl md:text-2xl font-bold mb-3">{item.title}</h3>
-                <p className="text-sm md:text-base mb-4 text-white/90">{item.description}</p>
-                <button
-                  onClick={() => setSelectedItem(item)}
-                  className="border border-white px-5 py-2 rounded-md hover:bg-white hover:text-[#e64d24] transition-all w-fit mt-4 md:mt-0"
-                >
-                  SABER MÁS
-                </button>
-
-              
-              </div>
+                SABER MÁS
+              </button>
             </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
 
       {/* Modal */}
@@ -110,7 +96,6 @@ const PortfolioSection = () => {
             <ul className="space-y-2 text-gray-700">
               {selectedItem.longDescription.map((point, idx) => (
                 <li key={idx} className="flex items-start gap-2">
-                  <span className="text-green-500 text-lg"></span>
                   <span>{point}</span>
                 </li>
               ))}

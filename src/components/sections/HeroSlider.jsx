@@ -5,6 +5,12 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const slides = [
+   {
+    image: "/aniversario.png",
+    alt: "",
+    title: "14 Años creando soluciones  innovadoras.",
+    subtitle: "",
+  },
   {
     image: "https://cdn.pixabay.com/photo/2015/05/29/17/21/container-789488_960_720.jpg",
     alt: "Puerto marítimo moderno con contenedores al atardecer",
@@ -23,12 +29,7 @@ const slides = [
     title: "Ahorre tiempo y aumente su eficiencia",
     subtitle: "Soluciones de software que eliminan fronteras comerciales.",
   },
-    {
-    image: "/aniversario.png",
-    alt: "",
-    title: "14 Años creando soluciones  innovadoras.",
-    subtitle: "",
-  },
+   
 ];
 
 const variants = {
