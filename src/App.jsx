@@ -15,6 +15,7 @@ import CalificacionesSection  from '@/components/sections/CalificacionesSection'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import useSectionObserver from "./hooks/useSectionObserver";
+import WhatsappButton from "./components/WhatsappButton";
 
 function App() {
   useEffect(() => {
@@ -68,11 +69,13 @@ function App() {
             <PortfolioSection handleContactClick={handleContactClick} />
           </div>
           <ClientsSection />
-          <CalificacionesSection />
+          
           <div className="wave-pattern">
             <ContactSection handleContactClick={handleContactClick} />
           </div>
         </main>
+        
+        <WhatsappButton />
         
         <Footer />
         <Toaster />
