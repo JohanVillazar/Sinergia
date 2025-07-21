@@ -4,8 +4,8 @@ const WhatsAppFloatButton = () => {
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2">
       {/* Globito de soporte */}
-      <div className="bg-white text-red-600 text-sm px-4 py-1 rounded-full border border-red-400 shadow-md animate-bounce">
-        Canal de soporte
+      <div className="bg-white text-orange-600 text-sm px-4 py-1 rounded-full border border-red-400 shadow-md animate-bounce">
+       ¿Necesitas Ayuda?
       </div>
 
       {/* Botón de WhatsApp */}
@@ -17,7 +17,7 @@ const WhatsAppFloatButton = () => {
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="w-6 h-6"
+          className="w-7 h-6"
           fill="currentColor"
           viewBox="0 0 24 24"
         >
