@@ -43,7 +43,7 @@ const Footer = () => {
           <div>
             <span className="font-semibold text-lg mb-4 block">Contacto</span>
             <div className="space-y-2">
-              <p className="text-gray-400">info@sinergiasoluciones.com.co</p>
+              <p className="text-gray-400">admon@sinergiasoluciones.com.co</p>
               <p className="text-gray-400">+57 300 484 0819</p>
               <p className="text-gray-400">Bogotá, Colombia</p>
             </div>
