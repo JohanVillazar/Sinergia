@@ -14,7 +14,7 @@ const ContactSection = ({ handleContactClick }) => {
       <div className="text-center mb-16">
         <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-[#333]">Contacto</h2>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          Para contactarnos, escríbenos al correo <strong>info@sinergiasoluciones.com.co</strong> y estaremos en contacto contigo.
+          Para contactarnos, escríbenos al correo <strong>admon@sinergiasoluciones.com.co</strong> y estaremos en contacto contigo.
         </p>
       </div>
     </AnimatedSection>
